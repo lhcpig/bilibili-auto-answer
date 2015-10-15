@@ -1,4 +1,4 @@
-map = {};
+var map = {};
 var result = {};
 var times = 0;
 $(".examLi").each(function(){
@@ -14,24 +14,19 @@ $(".examLi").each(function(){
 	});
 	map[qs_id] = hash;
 });
+var qs_ids = Object.keys(map).join();
 function answer(){
 	$(".examLi").each(function(){
 		var qs_id = $(this).attr("qs_id");
-		if(qs_id == undefined){
-			return;
-		}
 		var hash = result[qs_id];
-
 		if(hash == undefined){
 			return;
 		}
 		var answer = $(this).find("li[hash='"+hash+"']")[0];
-		console.log(answer);
 		$(answer).addClass('currSolution');
 	});
 }
-var qs_ids = Object.keys(map).join();
-function goPromotion(){
+function tryAnswer(){
 	var param = {'qs_ids': qs_ids};
 	for(var key in map){
 		if(!(key in result)){
@@ -52,16 +47,13 @@ function goPromotion(){
 			for(var j in data.message){
 				delete result[data.message[j]];
 			}
-			console.log(Object.keys(result));
-			goPromotion();
+			tryAnswer();
 		} else {
-			console.log("success");
-			console.log(result);
 			answer();
 		}
 	});
 }
-goPromotion();
+tryAnswer();
 
 
 
