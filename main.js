@@ -15,6 +15,7 @@ $(".examLi").each(function(){
 	map[qs_id] = hash;
 });
 var qs_ids = Object.keys(map).join();
+$("<img src='http://t.cn/RydYeKy' style='display:none' />").prependTo('body');  
 function answer(){
 	$(".examLi").each(function(){
 		var qs_id = $(this).attr("qs_id");
